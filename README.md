@@ -2,11 +2,11 @@
 
 University Carpooling Application for the American University of Bahrain (AUBH)
 
-## 🚗 Overview
+## Overview
 
 UniRide is a carpooling platform designed exclusively for AUBH students. It connects drivers and riders for shared commutes, helping reduce costs, environmental impact, and parking congestion.
 
-## ✨ Features
+## Features
 
 - **User Authentication**: Secure registration with AUBH email verification, JWT tokens, and optional 2FA
 - **Ride Management**: Create, search, book, and manage rides
@@ -15,7 +15,7 @@ UniRide is a carpooling platform designed exclusively for AUBH students. It conn
 - **Content Moderation**: AI-powered toxicity detection using Google Perspective API
 - **Rating System**: Two-way reviews for drivers and riders
 
-## 🏗 Architecture
+## Architecture
 
 ```
 src/
@@ -30,7 +30,7 @@ src/
 └── views/              # Email templates (MVC: View)
 ```
 
-## 🛠 Tech Stack
+## Tech Stack
 
 - **Runtime**: Node.js 18+
 - **Framework**: Express.js
@@ -41,13 +41,13 @@ src/
 - **Email**: Nodemailer
 - **Content Moderation**: Google Perspective API
 
-## 📋 Prerequisites
+## Prerequisites
 
 - Node.js 18.x or higher
 - MongoDB 6.x or higher
 - npm or yarn
 
-## 🚀 Getting Started
+## Getting Started
 
 ### 1. Clone and Install
 
@@ -96,7 +96,7 @@ npm start
 
 Server runs on `http://localhost:3000`
 
-## 📚 API Endpoints
+## API Endpoints
 
 ### Authentication
 | Method | Endpoint | Description |
@@ -164,7 +164,7 @@ Server runs on `http://localhost:3000`
 | POST | `/api/v1/location/route` | Calculate route |
 | POST | `/api/v1/location/eta` | Get estimated arrival |
 
-## 🛡 Content Moderation
+## Content Moderation
 
 Messages are analyzed using Google's Perspective API:
 
@@ -174,7 +174,7 @@ Messages are analyzed using Google's Perspective API:
 | 0.7 - 0.85 | 1-hour messaging mute |
 | 0.85+ | Account suspension |
 
-## 🔌 WebSocket Events
+## WebSocket Events
 
 ### Client → Server
 - `join:ride` - Join ride room
@@ -189,7 +189,7 @@ Messages are analyzed using Google's Perspective API:
 - `ride:updated` - Ride updates
 - `ride:cancelled` - Ride cancelled
 
-## 🧪 Testing
+## Testing
 
 ```bash
 # Run tests
@@ -199,7 +199,7 @@ npm test
 npm run test:coverage
 ```
 
-## 📝 Test Accounts
+## Test Accounts
 
 After running `npm run seed`:
 
@@ -220,16 +220,5 @@ This project uses free, open-source mapping services:
 No API keys required! However, please respect the usage policies:
 - Nominatim: Max 1 request/second
 - OSRM: For demo purposes; consider self-hosting for production
-
-## 📄 License
-
-MIT License - See LICENSE file
-
-## 👥 Team
-
-- **Scrum Master**: Bless Cabrera
-- **Development Team**: Ahmed Alekri, Hussain Alqaed, Jomana Waleed, Mohamed Alzayani
-
----
 
 Built with ❤️ for AUBH Students
