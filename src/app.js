@@ -2,11 +2,14 @@
  * UniRide Backend Application
  * University Carpooling System
  * 
+ * UPDATED: Added payment routes
+ * 
  * Architecture: MVC (Model-View-Controller)
  * Database: MongoDB with Mongoose ODM
  * Authentication: JWT with 2FA support
  * Real-time: Socket.IO for notifications
  * Maps: OpenStreetMap with OSRM routing
+ * Payments: Wallet-based with cost splitting
  */
 
 require('dotenv').config();
@@ -37,6 +40,7 @@ const reviewRoutes = require('./routes/reviewRoutes');
 const messageRoutes = require('./routes/messageRoutes');
 const notificationRoutes = require('./routes/notificationRoutes');
 const locationRoutes = require('./routes/locationRoutes');
+const paymentRoutes = require('./routes/paymentRoutes'); // NEW
 
 const app = express();
 const server = http.createServer(app);
@@ -109,6 +113,7 @@ app.use(`${apiPrefix}/reviews`, reviewRoutes);
 app.use(`${apiPrefix}/messages`, messageRoutes);
 app.use(`${apiPrefix}/notifications`, notificationRoutes);
 app.use(`${apiPrefix}/location`, locationRoutes);
+app.use(`${apiPrefix}/payments`, paymentRoutes); // NEW - Payment routes
 
 // Error Handling
 app.use(notFoundHandler);

@@ -4,7 +4,7 @@
  */
 
 const jwt = require('jsonwebtoken');
-const { User } = require('../models');
+const { User } = require('../models/models-index');
 const config = require('../config');
 const AppError = require('../utils/AppError');
 const asyncHandler = require('./asyncHandler');
